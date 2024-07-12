@@ -27,6 +27,8 @@ PUs <- st_read(file.path(inputDat,  "PUs","Galapagos_Planning_Units.shp")) %>%
 ggplot() +
   geom_sf(data = PUs)
 
+# Shayna note - there was background work done to convert all these shape files to .rds files, which are more space efficient
+
 # Create an sf object for all features
 features <- readRDS(file.path(inputDat, "Features", "fans.rds")) %>%
   left_join(readRDS(file.path(inputDat, "Features", "plateau.rds")) %>% st_drop_geometry(), by = "cellID") %>%

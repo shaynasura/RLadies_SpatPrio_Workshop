@@ -1,0 +1,58 @@
+---
+title: "Notes"
+author: "Shayna A. Sura"
+format: html
+---
+
+## Notes
+
+Spatial data is any data that can be mapped spatially. Anything with a lat/long component.
+ - can be point data
+ - can be continuous data (temperature data across Australia).
+
+Spatial data have geographic coordinates.
+- The world is a sphere which has different coordinates than a 2D map
+- Use projections to convert between 2D and 3D maps
+- Project spatial data in a coordinate reference system (CRS)
+
+Coordinate Reference System (CRS) Syntax
+- need a projection to represnt data on a flat map
+- Need an EPSG code - the CRS projection code
+- 4326 (common one) WGS 84
+- a different one that we will use in this presentation: PROJ4 strings
+
+# Vector vs. Raster Data
+- Vector: points, lines, polygons
+    - better for categorical data
+    - better storage options for a spatial layer characterized by many attributes.
+- Raster: grids of cells, pixels
+    - better for continuous data
+    - better storage options for a spatial. layer characterized by one attribute.
+
+# GIS tools
+- tools that analyze and display geographically referenced data
+- common ones: ArcGIS, QGIS, GoogleEarth Pro
+- can also be done in R and Python
+    - makes workflow reproducible when it's done in a programming language.
+
+
+Question: Would cell size here be in the same units as the geometry? So metres for this example?
+Answer: Yes. This is why the projection is also important because it takes the units that’s set in the CRS.
+
+
+# Spatial Prioritization
+Spatial prioritization - quantitative methods that aid in identifying priority areas for a particular action (e.g., conservation) while meeting certain criteria (e.g., meeting area-based targets)
+
+Features: things that we care about with their
+Targets: how much we want to include.
+
+
+
+
+
+
+
+
+
+
+

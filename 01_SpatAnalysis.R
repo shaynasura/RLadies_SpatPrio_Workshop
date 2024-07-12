@@ -43,7 +43,7 @@ plot(dwCorals)
 ## csv (data from Jaime Restrepo)
 turtle1 <- read_csv(file.path("Input", "Extra_Data", "turtle_Argos.csv")) %>%
   drop_na(c("Latitude", "Longitude")) %>%
-  st_as_sf(coords = c("Longitude", "Latitude"), crs = LatLon) 
+  st_as_sf(coords = c("Longitude", "Latitude"), crs = LatLon) # specify CRS here
 
 ### Check data using ggplot
 ggplot() +
@@ -91,7 +91,7 @@ leaflet(turtle1) %>%
                     weight = 0.1, 
                     fill = TRUE, 
                     fillOpacity = 0.7, 
-                    fillColor = ~oranges(date_time))
+                    fillColor = ~oranges(date_time)) # ~oranges accesses a variable in your dataframe.
 
 
 # BONUS: Animating --------------------------------------------------------
